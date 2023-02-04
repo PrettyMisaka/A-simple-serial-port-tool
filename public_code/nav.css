@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxs;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../icomoon/fonts/icomoon.eot?10pyqm');
+    src: url('../icomoon/fonts/icomoon.eot?10pyqm#iefix') format('embedded-opentype'), url('../icomoon/fonts/icomoon.ttf?10pyqm') format('truetype'), url('../icomoon/fonts/icomoon.woff?10pyqm') format('woff'), url('../icomoon/fonts/icomoon.svg?10pyqm#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    -webkit-app-region: drag;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#nav-icon {
+    box-sizing: border-box;
+    /* border: 1px solid; */
+    height: 100%;
+    padding: 0px 20px;
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+#nav-mid {
+    flex: 1;
+}
+
+#nav-end {
+    height: 100%;
+    -webkit-app-region: no-drag;
+}
+
+#nav-end>span {
+    float: left;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    font-family: 'icomoon';
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s;
+}
+
+#nav-end>span:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    z-index: 1;
+}
+
+#nav-end>span:nth-child(2) {
+    font-size: 23px;
+}

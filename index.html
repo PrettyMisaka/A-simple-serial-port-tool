@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public_code/nav.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="nav">
+        <div id="nav-icon">Serial Port Tool</div>
+        <div id="nav-mid"></div>
+        <div id="nav-end">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="main-block">
+        <div id="sidebar">
+            <div id="SerialPortSelectBlock">
+                <span>SerialPort</span>
+                <select name="SerialPortSelect" id="SerialPortSelectEl"></select>
+            </div>
+            <div id="SerialPortValueSetBlock">
+                <div id="dataBits">
+                    <span>dataBits</span>
+                    <select name="" id="Serial-dataBits-select">
+                        <option value=8 selected>8</option>
+                        <option value=7>7</option>
+                        <option value=6>6</option>
+                        <option value=5>5</option>
+                    </select>
+                </div>
+                <div id="stopBits">
+                    <span>stopBits</span>
+                    <select name="" id="Serial-stopBits-select">
+                        <option value=1 selected>1</option>
+                        <option value=2>2</option>
+                    </select>
+                </div>
+                <div id="parity">
+                    <span>parity</span>
+                    <select name="" id="Serial-parity-select">
+                        <option value="none" selected>NONE</option>
+                        <option value="odd">ODD</option>
+                        <option value="even">EVEN</option>
+                        <option value="space">SPACE</option>
+                        <option value="mark">MARK</option>
+                    </select>
+                </div>
+                <div id="baudRate">
+                    <span>baudRate</span>
+                    <select name="" id="Serial-baudRate-select">
+                        <option value=110 >110</option>
+                        <option value=300>300</option>
+                        <option value=600>600</option>
+                        <option value=1200>1200</option>
+                        <option value=2400>2400</option>
+                        <option value=4800>4800</option>
+                        <option value=9600 selected >9600</option>
+                        <option value=14400>14400</option>
+                        <option value=19200>19200</option>
+                        <option value=38400>38400</option>
+                        <option value=56000>56000</option>
+                        <option value=115200>115200</option>
+                    </select>
+                </div>
+
+            </div>
+            <div id="SerialPortOpenBlock">
+                <span>OPEN</span>
+            </div>
+            <div id="showModChangeBlock">
+                <span>receive mod</span>
+                <div id="receiveShowModSetBtn">
+                    <div>STR</div>
+                </div>
+                <span>transmit mod</span>
+                <div id="transmitShowModSetBtn">
+                    <div>STR</div>
+                </div>
+            </div>
+            <div id="SerialPortInfo"></div>
+        </div>
+        <div id="SerialInfoShowArea">
+            <div id="Serial-info-receive"></div>
+            <div>
+                <textarea name="" id="Serial-info-transmit" cols="30" rows="10" disabled placeholder="open the port to transmit msg"></textarea>
+                <button id="serial-info-send-btn" disable>send</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./renderer.js"></script>
+<script src="./public_code/nav.js"></script>
+
+</html>

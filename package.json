@@ -1,0 +1,32 @@
+{
+    "name": "serialporttool",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "electron:serve": "vite build & electron . ",
+        "electron:build": "electron-builder",
+        "preview": "vite preview",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make"
+    },
+    "author": "prettymisaka",
+    "license": "ISC",
+    "devDependencies": {
+        "@electron-forge/cli": "^6.0.4",
+        "@electron-forge/maker-deb": "^6.0.4",
+        "@electron-forge/maker-rpm": "^6.0.4",
+        "@electron-forge/maker-squirrel": "^6.0.4",
+        "@electron-forge/maker-zip": "^6.0.4",
+        "electron": "^22.1.0",
+        "electron-builder": "^23.6.0",
+        "serialport": "^10.5.0"
+    },
+    "dependencies": {
+        "electron-squirrel-startup": "^1.0.0"
+    }
+}

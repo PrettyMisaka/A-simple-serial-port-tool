@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxs;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('icomoon/fonts/icomoon.eot?10pyqm');
+    src: url('icomoon/fonts/icomoon.eot?10pyqm#iefix') format('embedded-opentype'), url('../icomoon/fonts/icomoon.ttf?10pyqm') format('truetype'), url('icomoon/fonts/icomoon.woff?10pyqm') format('woff'), url('icomoon/fonts/icomoon.svg?10pyqm#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+body {
+    background: linear-gradient(315deg, #e5e0ff, #7286d3) no-repeat;
+    /* background: linear-gradient(45deg, #d4696980, #33354b) no-repeat; */
+    height: 100vh;
+    overflow: hidden;
+    /* background-color: #3aa7fa; */
+}
+
+select {
+    border: none;
+    border-radius: 25vh;
+    text-align: center;
+    cursor: pointer;
+}
+
+select:focus-visible {
+    /* outline: -webkit-focus-ring-color auto 1px; */
+    outline: none;
+    border-radius: 10%;
+}
+
+select>option {
+    border-radius: 10%;
+}
+
+#main-block {
+    display: flex;
+    justify-content: left;
+    align-items: stretch;
+    height: 560px;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: stretch;
+    width: 200px;
+    height: 100vh;
+    background-color: #fff2f280;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+#SerialPortSelectBlock {
+    display: flex;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#SerialPortSelectBlock>span {
+    display: block;
+    height: 30px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+}
+
+#SerialPortSelectBlock>select {
+    height: 20px;
+    width: 90%;
+    border: none;
+}
+
+#SerialPortSelectBlock>select>option {
+    height: 20px;
+    border: none;
+}
+
+#SerialPortValueSetBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0;
+    height: 160px;
+    width: 100%;
+}
+
+#SerialPortValueSetBlock>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    width: 100%;
+}
+
+#SerialPortValueSetBlock>div>span {
+    height: 100%;
+    width: 35%;
+    padding: 0 10px 0px 0;
+    text-align: right;
+    line-height: 40px;
+}
+
+#SerialPortValueSetBlock>div>select {
+    display: inline-block;
+    /* float: left; */
+    height: 20px;
+    width: 45%;
+}
+
+#SerialPortOpenBlock {
+    /* flex: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* background-color: #fff; */
+}
+
+#SerialPortOpenBlock>span {
+    display: inline-block;
+    height: 40px;
+    width: 140px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+    background: linear-gradient(-45deg, #8ea7e9, #7286d3) no-repeat;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 1s linear;
+}
+
+#SerialPortOpenBlock>span:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
+}
+
+#SerialPortOpenBlock>span:active {
+    box-shadow: none;
+}
+
+#SerialPortInfo {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    font-family: 'icomoon';
+    font-size: 40px;
+    cursor: pointer;
+    /* background: linear-gradient(-45deg, #e6646480, #9198e580) no-repeat; */
+}
+
+#SerialInfoShowArea {
+    flex: 1;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    font-size: 16px;
+}
+
+#Serial-info-receive {
+    margin-top: 3%;
+    margin: auto;
+    padding: 2%;
+    width: 86%;
+    height: 70%;
+    font-size: 24px;
+    background-color: #ffffff40;
+    border-radius: 3vh;
+    transition: 1s;
+    overflow: auto;
+    font-size: 16px;
+}
+
+#SerialInfoShowArea div:last-child {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* height: 25%; */
+    width: 90%;
+}
+
+#Serial-info-transmit {
+    display: inline-block;
+    width: 70%;
+    height: 60%;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #ffffff40;
+    border-radius: 3vh;
+    transition: 1s;
+    resize: none;
+    font-size: 16px;
+}
+
+#Serial-info-transmit:focus-visible {
+    outline: solid black 1px;
+}
+
+#serial-info-send-btn {
+    flex: 2;
+    margin: 0 5% 0 7%;
+    border-radius: 4vmin;
+    width: 7%;
+    height: 60%;
+    cursor: pointer;
+    color: white;
+    border: none;
+    font-size: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+
+#serial-info-send-btn:hover {
+    /* box-shadow: rgba(255, 255, 255, 0.5) 4px 4px 4px; */
+}
+
+#serial-info-send-btn:active {
+    box-shadow: none;
+}
+
+#showModChangeBlock>div {
+    margin: 0 30px;
+    height: 20px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: #fff2f2;
+    cursor: pointer;
+}
+
+#showModChangeBlock>span {
+    margin: 5px 0;
+    display: inline-block;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+}
+
+#showModChangeBlock>div>div {
+    height: 20px;
+    width: 100px;
+    float: left;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    background-color: #e5e0ff;
+}
